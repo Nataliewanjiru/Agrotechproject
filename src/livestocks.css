@@ -1,8 +1,18 @@
+
+
 .main {
   font-family: Arial, sans-serif;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -10,13 +20,24 @@ h1 {
   color: #333;
 }
 
-.form-group {
+.Text p {
   margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
 }
 
 input {
   width: 100%;
   padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
@@ -24,6 +45,7 @@ button {
   background-color: #007bff;
   color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -31,17 +53,49 @@ button:hover {
   background-color: #0056b3;
 }
 
-.livestock-images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.added-livestocks ul {
+  list-style: none;
+  padding: 0;
 }
 
-.livestock-images img {
-  max-width: 30%;
+.added-livestocks li {
   margin-bottom: 10px;
 }
 
-.livestock-images p {
-  font-size: 0.8em;
+.livestock-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
+
+/* Styling for individual livestock image and description */
+.livestock-images .Cow,
+.livestock-images .Rabbit,
+.livestock-images .Chicken {
+  flex: 0.3;
+  text-align: center;
+}
+
+/* Styling for livestock images */
+.livestock-images img {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Styling for livestock descriptions */
+.livestock-images p {
+  font-size: 0.9em;
+}
+
+
+.Cow p,
+.Rabbit p,
+.Chicken p {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+
+
