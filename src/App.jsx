@@ -1,5 +1,7 @@
 
-import { useState } from 'react'
+import About from './about';
+import Livestock from './livestocks'; 
+import Crop from './crop';
 import './App.css'
 import Login from './Login'
 import Register from './Register'
@@ -18,11 +20,16 @@ const App = () => {
       <Route path="/login" exact="true" element={<Login/>}/>
       <Route path="/signup" exact="true" element={<Register/>}/>
      </Routes>
-     
+     <div className="app">
+      <Livestock />
+      <Crop />
+      < About />
+    </div>
     </>
   );
 };
 
 export default App;
+
 
 

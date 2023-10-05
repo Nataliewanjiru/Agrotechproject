@@ -1,0 +1,84 @@
+/* about.css */
+
+.about-us {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.Photos {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.Photos img {
+    max-width: 300px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.Contact-Us {
+    text-align: center;
+    margin-top: 30px;
+    border: 2px solid #ccc; /* Add border */
+    background-color: #5e3c05d5; /* Add background color */
+    padding: 20px; /* Add some padding for spacing */
+}
+
+.Contact-Us h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.Contact-Us h3, .Contact-Us h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #383737;
+}
+
+.Contact-Us p {
+    font-size: 1.2em;
+    color: #292929;
+    margin-bottom: 10px;
+}
+
+.Contact-Us i {
+    margin-right: 10px;
+    color: #e8eae9;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.Contact-Us a {
+    color: #eaedf0; /* Change this to your preferred link color */
+    text-decoration: none;
+}
+
+.Contact-Us a:hover {
+    text-decoration: underline;
+}
