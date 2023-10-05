@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Equipment from './Components/Equipments';
-import About from './about';
+import Advisor from './advisor';
 import Livestock from './Livestocks'; 
 import Crop from './Crop';
 import './App.css'
@@ -18,6 +18,7 @@ const App = () => {
   return(
     <>
       <Navbar />
+    <Advisor />
      <Routes>
       <Route path="/" exact="true" element={<Home/>}/>
       <Route path="/login" exact="true" element={<Login/>}/>
@@ -30,8 +31,6 @@ const App = () => {
       <Route path="/finances/:userId" exact="true" element={<Finance/>}/>
      <Route path="*" element={<h1>404</h1>}/>
      </Routes>
-     <div className="app">
-    </div>
     </>
   );
 };
