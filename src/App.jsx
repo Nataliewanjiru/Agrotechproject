@@ -11,6 +11,7 @@ import Home from './Home';
 import { Route, Routes } from 'react-router-dom';
 import Cards from './Cards';
 import Finance from './Components/Finance'
+import About from './about'
 
 
 const App = () => {
@@ -18,7 +19,6 @@ const App = () => {
   return(
     <>
       <Navbar />
-    <Advisor />
      <Routes>
       <Route path="/" exact="true" element={<Home/>}/>
       <Route path="/login" exact="true" element={<Login/>}/>
@@ -29,6 +29,7 @@ const App = () => {
       <Route path="/about" exact="true" element={<About/>}/>
       <Route path="/equipments/:userId" exact="true" element={<Equipment/>}/>
       <Route path="/finances/:userId" exact="true" element={<Finance/>}/>
+      <Route path="/advisor" exact="true" element={<Advisor/>}/>
      <Route path="*" element={<h1>404</h1>}/>
      </Routes>
     </>

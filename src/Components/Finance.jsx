@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import './Finance.css';
 
-
-
 const Finance = () => {
     const [finances, setFinances] = useState([]);
-    const [farm, setFarm] = useState([]);
-    const { userId } = useParams();
+    const[farm,setFarm]=useState([])
+    const {userId}=useParams()
 
     useEffect(() => {
+        // Fetch finance data from the provided API link
         fetch('https://agrotechbackend.onrender.com/finances')
             .then((response) => response.json())
             .then((data) => {
@@ -20,13 +19,10 @@ const Finance = () => {
             .then((response) => response.json())
             .then((data) => {
                 setFarm(data);
-            });
+              });
     }, []);
-
-    const filteredFarm = farm.find((farm) => farm.farmer_id == userId);
-    const newData = finances.filter((item) => item.farm_id == filteredFarm.id);
-
-
+    
+    let newData = finances.filter(item => item.farm_id == userId);
     return (
         <div className="finance-container">
             <img src="https://i.pinimg.com/564x/4e/e8/de/4ee8de1944a5f1f7daf247a292319f76.jpg" alt="Farm Image 1" className="small-image" />

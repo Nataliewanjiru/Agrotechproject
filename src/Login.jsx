@@ -9,7 +9,7 @@ function Login() {
     const [password, setPassword] = useState("");
     const [users, setUsers] = useState([])
 
-    const navigate = useNavigate();
+  
 
 
     useEffect(() => {
