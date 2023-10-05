@@ -3,6 +3,7 @@ import './App.css';
 import About from './about';
 import Livestock from './livestocks'; 
 import Crop from './crop';
+import Advisor from './advisor';
 
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <Livestock />
       <Crop />
       < About />
+      <Advisor />
     </div>
   );
 }
