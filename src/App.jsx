@@ -1,4 +1,6 @@
 
+import React, { useState } from 'react';
+import Equipment from './Components/Equipments';
 import About from './about';
 import Livestock from './Livestocks'; 
 import Crop from './Crop';
@@ -11,10 +13,17 @@ import Home from './Home';
 import { Route, Routes } from 'react-router-dom';
 import Cards from './Cards';
 
-
 const App = () => {
-  return (
+   const [count, setCount] = useState(0);
+  return(
     <>
+    <div className="App">
+      <header className="App-header">
+        <h1>Equipment Data</h1>
+        {/* <Finance /> */}
+        {<Equipment />}
+      </header>
+    </div >
       <Navbar />
      <Routes>
       <Route path="/" exact="true" element={<Home/>}/>
@@ -29,9 +38,8 @@ const App = () => {
     </div>
     </>
   );
-};
+};)
 
 export default App;
-
 
 
