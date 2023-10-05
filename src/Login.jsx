@@ -20,6 +20,7 @@ function Login() {
             <button type="submit">Log In</button>
         </form>
         <button onClick={() => { changeForm("register") }} >Don't have an account</button>
+        
     </div>
     )
   }
