@@ -8,7 +8,8 @@ function App() {
 
   return (
     <>
-     {currentForm === "login" ? <Route exact path="/login" element={<Login changeForm={changeForm} />} /> : <Route exact path="/login" element={<Register changeForm={changeForm} />} />}
+    <Register/>
+    <Login/>
     </>
   )
 }
