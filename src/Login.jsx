@@ -1,15 +1,35 @@
-import React, { useState} from "react";
+import React, { useState, useEffect} from "react";
 
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [users, setUsers] = useState([])
 
+    useEffect(() => {
+        fetch("https://agrotechbackend.onrender.com/users")
+          .then((res) => res.json())
+          .then((data) => setUsers(data))
+      }, []);
 
-    const signIn = (e) => {
+ 
+      const signIn = (e) => {
         e.preventDefault();
-        setEmail("")
-        setPassword("")
-    };
+        for (const user of users) {
+          if (user.email === email) {
+            console.log("Login successful");
+            setEmail("");
+            setPassword("");
+            return; 
+          }
+        }
+      
+        // If no match is found after looping through all users
+        console.log("Login failed");
+      };
+      
+      
+      
+      
   
     return (
         <div className="sign-in-container">
@@ -20,7 +40,7 @@ function Login() {
             <button type="submit">Log In</button>
         </form>
         <button onClick={() => { changeForm("register") }} >Don't have an account</button>
-        
+
     </div>
     )
   }

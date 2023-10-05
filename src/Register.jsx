@@ -17,7 +17,7 @@ const Register = ({ changeForm }) => {
         console.log(formData);
 
         try {
-            const response = await axios.post("https://agrotechbackend.onrender.com/user", formData);
+            const response = await axios.post("https://agrotechbackend.onrender.com/register", formData);
             console.log(response.data); // Handle the response from the backend
         } catch (error) {
             console.error(error);
