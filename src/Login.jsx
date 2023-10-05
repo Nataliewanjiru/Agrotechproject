@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -39,7 +40,7 @@ function Login() {
             <input type="password" placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
             <button type="submit">Log In</button>
         </form>
-        <button onClick={() => { changeForm("register") }} >Don't have an account</button>
+        <button><Link to="/signup">Don't have an account</Link></button>
 
     </div>
     )

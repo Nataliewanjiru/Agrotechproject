@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+
 
 const Home = () => {
   return (
@@ -11,7 +11,6 @@ const Home = () => {
       </p>
       <div className="featured-products">
         <h2>Featured Products</h2>
-        {/* You can add featured product cards here */}
       </div>
     </div>
   );

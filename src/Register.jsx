@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Register = ({ changeForm }) => {
     const [formData, setFormData] = useState({
@@ -79,9 +80,7 @@ const Register = ({ changeForm }) => {
                 />
                 <button type="submit">Sign Up</button>
             </form>
-            <button onClick={() => changeForm("login")}>
-                Already have an account.
-            </button>
+            <button><Link to="/login">Already have an account</Link></button>
         </div>
     );
 };

@@ -6,19 +6,23 @@ import Register from './Register'
 import React from 'react';
 import Navbar from './Navbar';
 import Home from './Home'; 
+import { Route, Routes } from 'react-router-dom';
 
 
 const App = () => {
-  const [count, setCount] = useState(0)
   return (
-
     <>
-    <Register/>
-    <Login/>
-    <Navbar />
-    <Home /> {/* Include the Home component */}
+      <Navbar />
+     <Routes>
+      <Route path="/" exact="true" element={<Home/>}/>
+      <Route path="/login" exact="true" element={<Login/>}/>
+      <Route path="/signup" exact="true" element={<Register/>}/>
+     </Routes>
+     
     </>
-  )
-}
+  );
+};
 
 export default App;
+
+
