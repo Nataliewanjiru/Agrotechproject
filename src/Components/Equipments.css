@@ -1,0 +1,81 @@
+.equipment-list {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    padding: 20px;
+    min-height: 100vh;
+    background-image: url('https://www.pinterest.com/pin/918734392708885451/');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.equipment-list h1 {
+    color: blue;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.equipment-list form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.equipment-list label {
+    font-weight: bold;
+}
+
+.equipment-list input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.equipment-list button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.equipment-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.equipment-list li {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.equipment-list h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.equipment-list p {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+}
+
+.equipment-list body {
+    background-image: url('https://i.pinimg.com/564x/79/00/68/790068bc7c5e7e9aaa7d11fd0feb0a8a.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}

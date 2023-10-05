@@ -1,0 +1,85 @@
+/* Finance.css */
+
+.finance-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.small-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+.finance-container h1 {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.finance-container p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: black;
+}
+
+.finance-container h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: rgb(173, 95, 26);
+}
+
+.finance-container .finance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.finance-container .finance-table th,
+.finance-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.finance-container .image-below-table {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.finance-container .image-below-table img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.finance-container .image-below-table p {
+    font-size: 1.2rem;
+    max-width: 400px;
+    margin: 0;
+    color: black;
+}
+
+.finance-container .image-below-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.finance-container .image-below-text img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.finance-container .image-below-text p {
+    font-size: 1.2rem;
+    max-width: 400px;
+    margin: 0;
+    color: black;
+}

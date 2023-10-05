@@ -1,29 +1,54 @@
-import React, { useState } from "react";
-import  './livestocks.css';
-import  Carousel from "./carousel";
-
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import './livestocks.css';
+import Carousel from "./carousel";
+import axios from "axios";
 
 function Livestock() {
-  const [livestockType, setLivestockType] = useState("");
-  const [weaningDate, setWeaningDate] = useState("");
-  const [slaughterDate, setSlaughterDate] = useState("");
-  const [quantity, setQuantity] = useState("");
-  const [livestocks, setLivestocks] = useState([]);
+  const { userId } = useParams();
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    const newLivestock = {
-      livestockType,
-      weaningDate,
-      slaughterDate,
-      quantity
-    };
-    setLivestocks([...livestocks, newLivestock]);
-    setLivestockType("");
-    setWeaningDate("");
-    setSlaughterDate("");
-    setQuantity("");
+  const initialFormData = {
+    farmId: userId,
+    livestockType: "",
+    weaningDate: "",
+    slaughterDate: "",
+    quantity: ""
   };
+
+  const [formData, setFormData] = useState(initialFormData);
+  const [data, setData] = useState([]);
+  const { farmId, livestockType, weaningDate, slaughterDate, quantity } = formData;
+
+  useEffect(() => {
+    fetch("https://agrotechbackend.onrender.com/livestocks")
+      .then((res) => res.json())
+      .then((data) => setData(data))
+  }, []);
+
+  let newData = data.filter(item => item.farm_id == userId);
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
+  
+    try {
+      const response = await axios.post("https://agrotechbackend.onrender.com/livestocks", {
+        farm_id: farmId, 
+        livestock_type: livestockType,
+        weaning_date: weaningDate,
+        slaughter_date: slaughterDate,
+        quantity: quantity
+      });
+      
+      console.log(response.data); // Handle the response from the backend
+  
+      // Clear the form inputs after successful submission
+      setFormData(initialFormData);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
 
   return (
     <div className="main" style={{ fontFamily: 'Arial, sans-serif', maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
@@ -64,7 +89,7 @@ function Livestock() {
                 type="text"
                 id="livestockType"
                 value={livestockType}
-                onChange={(e) => setLivestockType(e.target.value)}
+                onChange={(e) => setFormData({ ...formData, livestockType: e.target.value })}
               />
             </div>
             <div className="form-group">
@@ -73,7 +98,7 @@ function Livestock() {
                 type="date"
                 id="weaningDate"
                 value={weaningDate}
-                onChange={(e) => setWeaningDate(e.target.value)}
+                onChange={(e) => setFormData({ ...formData, weaningDate: e.target.value })}
               />
             </div>
             <div className="form-group">
@@ -82,7 +107,7 @@ function Livestock() {
                 type="date"
                 id="slaughterDate"
                 value={slaughterDate}
-                onChange={(e) => setSlaughterDate(e.target.value)}
+                onChange={(e) => setFormData({ ...formData, slaughterDate: e.target.value })}
               />
             </div>
             <div className="form-group">
@@ -91,17 +116,20 @@ function Livestock() {
                 type="number"
                 id="quantity"
                 value={quantity}
-                onChange={(e) => setQuantity(e.target.value)}
+                onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
               />
             </div>
             <button type="submit">Add Livestock</button>
           </form>
           <div className="added-livestocks">
             <h2>Added Livestocks</h2>
-            <ul>
-              {livestocks.map((livestock, index) => (
-                <li key={index}>
-                  Type: {livestock.livestockType}, Weaning Date: {livestock.weaningDate}, Slaughter Date: {livestock.slaughterDate}, Quantity: {livestock.quantity}
+            <ul className="livestockList">
+              {newData.map((livestock, index) => (
+                <li key={index} className="livestock-item">
+                  <span>Type: {livestock.livestock_type}</span>
+                  <span>Weaning Date: {livestock.weaning_date}</span>
+                  <span>Slaughter Date: {livestock.slaughter_date}</span>
+                  <span>Quantity: {livestock.quantity}</span>
                 </li>
               ))}
             </ul>
