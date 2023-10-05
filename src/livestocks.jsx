@@ -133,6 +133,9 @@ function Livestock() {
           </div>
         </section>
       </main>
+      <footer>
+                <p>&copy; Copyright Agro Tech 2023. Rental Agreement. Terms of service. Privacy policy.</p>
+       </footer>
     </div>
   );
 }
