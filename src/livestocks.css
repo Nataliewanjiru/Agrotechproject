@@ -98,4 +98,19 @@ button:hover {
 }
 
 
+.livestockList {
+  list-style: none;
+  padding: 0;
+}
 
+.livestock-item {
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: #fff;
+}
+
+.livestock-item span {
+  display: block;
+  margin-bottom: 6px;
+}

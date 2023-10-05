@@ -1,10 +1,16 @@
 import React, { useState, useEffect} from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
+
+
+
 
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [users, setUsers] = useState([])
+
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         fetch("https://agrotechbackend.onrender.com/users")
@@ -15,14 +21,20 @@ function Login() {
  
       const signIn = (e) => {
         e.preventDefault();
-        for (const user of users) {
-          if (user.email === email) {
-            console.log("Login successful");
-            setEmail("");
-            setPassword("");
-            return; 
+        if(password){
+          for (const user of users) {
+            if (user.email === email) {
+              console.log("Login successful");
+              setEmail("");
+              setPassword("");
+              navigate(`/cards/${user.id}`)
+              alert("Welcome back!") 
+            }
           }
+        }else{
+          alert("User not found")
         }
+        
       
         // If no match is found after looping through all users
         console.log("Login failed");

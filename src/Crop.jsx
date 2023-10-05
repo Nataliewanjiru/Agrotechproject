@@ -1,8 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './crop.css';
+import {useParams } from "react-router-dom";
 
 
 function Crop() {
+  const[data, setData]=useState([])
+
+  const{userId}= useParams();
+
+  useEffect(() => {
+    fetch("https://agrotechbackend.onrender.com/crops")
+    .then((res) => res.json())
+    .then((data) => setData(data))
+  }, [])
+
+  let newData= data.filter(item=>item.farm_id == userId)
+  
   const crops = [
     {
       name: 'Wheat (Triticum spp)',
@@ -114,15 +127,15 @@ function Crop() {
 
         <section>
           <h2>Records</h2>
-          <ul>
-            {cropRecords.map((record, index) => (
+          <ul className='cropList'>
+            {newData.map((record, index) => (
               <li key={index}>
-                <strong>Crop Type:</strong> {record.cropType},{' '}
-                <strong>Planting Date:</strong> {record.plantingDate},{' '}
-                <strong>Weeding Date:</strong> {record.weedingDate},{' '}
-                <strong>Harvest Date:</strong> {record.harvestDate},{' '}
-                <strong>Harvest Quantity:</strong> {record.harvestQuantity},{' '}
-                <strong>Acreage:</strong> {record.acreage}
+                <span><strong>Crop Type:</strong> {record.cropType},</span>{' '}
+                <span><strong>Planting Date:</strong> {record.planting},</span>{' '}
+                <span><strong>Weeding Date:</strong> {record.weeding},</span>{' '}
+                <span><strong>Harvest Date:</strong> {record.harvest},</span>{' '}
+                <span><strong>Acreage:</strong> {record.acreage}</span>
+                
               </li>
             ))}
           </ul>

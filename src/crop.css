@@ -57,3 +57,24 @@
     margin-bottom: 10px;
   }
   
+/* styles.css */
+.cropList {
+  list-style: none;
+  padding: 0;
+}
+
+.cropList li {
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: #fff;
+}
+
+.cropList li span {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* Add more custom styles as needed */
+

@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 
-const Register = ({ changeForm }) => {
+
+
+
+
+const Register = () => {
     const [formData, setFormData] = useState({
         first_name: "",
         last_name: "",
@@ -12,6 +16,9 @@ const Register = ({ changeForm }) => {
     });
 
     const { first_name, last_name, email, password, role } = formData;
+
+   
+
 
     const signUp = async (e) => {
         e.preventDefault();
@@ -32,6 +39,7 @@ const Register = ({ changeForm }) => {
             password: "",
             role: "",
         });
+        navigate(`/cards/${user.id}`)
     };
 
     return (
