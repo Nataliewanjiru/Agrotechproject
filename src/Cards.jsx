@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-
+import './Card.css';
 
 const Cards = () => {
  const { userId} = useParams();
@@ -8,6 +8,7 @@ const Cards = () => {
 
     return (
         <>
+        <div className="Cards">
         <h1>Welcome</h1>
         <ul>
             <li>
@@ -23,6 +24,7 @@ const Cards = () => {
             <Link to={`/equipments/${userId}`}>Equipments</Link>
             </li>
         </ul>
+        </div>
         </>
     )
 }

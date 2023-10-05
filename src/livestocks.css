@@ -17,15 +17,17 @@
 
 h1 {
   font-size: 2em;
-  color: #333;
 }
 
 .Text p {
   margin-bottom: 10px;
+  color: #000;
+  font-size: 130%;
+  
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 7px;
 }
 
 label {
@@ -42,7 +44,7 @@ input {
 
 button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #eedb08;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -50,7 +52,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #ae9b0bc7;
 }
 
 .added-livestocks ul {
@@ -87,6 +89,7 @@ button:hover {
 /* Styling for livestock descriptions */
 .livestock-images p {
   font-size: 0.9em;
+  color: #000;
 }
 
 
@@ -95,6 +98,7 @@ button:hover {
 .Chicken p {
   margin-top: 10px;
   font-style: italic;
+  color: #000;
 }
 
 
@@ -113,4 +117,11 @@ button:hover {
 .livestock-item span {
   display: block;
   margin-bottom: 6px;
+}
+footer {
+  background-color: #000; /* Set the background color of the footer to black */
+  color: #fff; /* Set the text color of the footer to white */
+  text-align: center;
+  padding: 10px;
+  border-radius: 0 0 10px 10px; /* Add rounded corners to the bottom of the footer */
 }
