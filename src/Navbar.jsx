@@ -20,7 +20,7 @@ const Navbar = () => {
             <Link to="/signup">Sign Up</Link> {/* New "Sign Up" Link */}
           </li>
           <li>
-            <Link to="/booking">Services Booking</Link> {/* New "Services Booking" Link */}
+            <Link to="/services">Services </Link> {/* New "Services Booking" Link */}
           </li>
         </ul>
       </nav>
