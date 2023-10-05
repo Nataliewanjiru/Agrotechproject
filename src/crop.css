@@ -7,10 +7,24 @@
     padding: 20px;
   }
   
+  .crop h1{
+    color: #000;
+  }
+
   .text p {
     font-size: 16px;
+    color: black;
+  }
+
+  p{
+    color: black;
   }
   
+  .crop-card p {
+    color: #000;
+    font-size: small;
+  }
+
   .crop-list {
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +54,7 @@
   }
   
   form button {
-    background-color: #007bff;
+    background-color: #daa30d;
     color: #fff;
     border: none;
     padding: 10px 20px;
