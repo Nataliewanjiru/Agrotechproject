@@ -8,24 +8,24 @@
     background-repeat: no-repeat;
 }
 
-h1 {
+.equipment-list h1 {
     color: blue;
     font-size: 28px;
     margin-bottom: 20px;
 }
 
-form {
+.equipment-list form {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
-label {
+.equipment-list label {
     font-weight: bold;
 }
 
-input[type="text"] {
+.equipment-list input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -44,35 +44,35 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-button[type="submit"]:hover {
+.equipment-list button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-ul {
+.equipment-list ul {
     list-style: none;
     padding: 0;
 }
 
-li {
+.equipment-list li {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 15px;
 }
 
-h2 {
+.equipment-list h2 {
     color: #333;
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-p {
+.equipment-list p {
     color: #666;
     font-size: 16px;
     margin: 0;
 }
 
-body {
+.equipment-list body {
     background-image: url('https://i.pinimg.com/564x/79/00/68/790068bc7c5e7e9aaa7d11fd0feb0a8a.jpg');
     background-size: cover;
     background-repeat: no-repeat;

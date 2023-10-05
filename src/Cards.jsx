@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
 import { Link, useParams } from "react-router-dom";
 
 
 const Cards = () => {
- const[data,setData] = useState([])
  const { userId} = useParams();
 
 
@@ -18,6 +16,12 @@ const Cards = () => {
             <li>
              <Link to={`/livestocks/${userId}`}>Livestocks</Link>
            </li>
+           <li>
+            <Link to={`/finances/${userId}`}>Finance</Link>
+           </li>
+           <li>
+            <Link to={`/equipments/${userId}`}>Equipments</Link>
+            </li>
         </ul>
         </>
     )
