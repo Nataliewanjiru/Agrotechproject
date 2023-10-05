@@ -1,0 +1,42 @@
+/* advisor.css */
+
+.advisors {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .advisors h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .advisors p {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .advisors ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .advisors li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .advisors li p {
+    margin: 0;
+  }
+  
+  .advisors li strong {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  

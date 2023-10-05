@@ -1,19 +1,31 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import './Finance.css';
+
+
 
 const Finance = () => {
     const [finances, setFinances] = useState([]);
-    // const [loading, setLoading] = useState(true);
+    const [farm, setFarm] = useState([]);
+    const { userId } = useParams();
 
     useEffect(() => {
-        // Fetch finance data from the provided API link
         fetch('https://agrotechbackend.onrender.com/finances')
             .then((response) => response.json())
             .then((data) => {
                 setFinances(data);
-                setLoading(false);
+            });
+
+        fetch('https://agrotechbackend.onrender.com/farms')
+            .then((response) => response.json())
+            .then((data) => {
+                setFarm(data);
             });
     }, []);
+
+    const filteredFarm = farm.find((farm) => farm.farmer_id == userId);
+    const newData = finances.filter((item) => item.farm_id == filteredFarm.id);
+
 
     return (
         <div className="finance-container">
@@ -34,7 +46,7 @@ const Finance = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {finances.map((finance) => (
+                    {newData.map((finance) => (
                         <tr key={finance.id}>
                             <td>{finance.id}</td>
                             <td>{finance.farm_id}</td>
