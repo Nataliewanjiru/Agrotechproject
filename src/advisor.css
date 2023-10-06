@@ -1,42 +1,45 @@
 /* advisor.css */
 
 .advisors {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .advisors h1 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .advisors p {
-    color: #555;
-    margin-bottom: 10px;
-  }
-  
-  .advisors ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .advisors li {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-  }
-  
-  .advisors li p {
-    margin: 0;
-  }
-  
-  .advisors li strong {
-    font-weight: bold;
-    margin-right: 5px;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex; /* Display advisor items in a row */
+  flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
+  justify-content: space-between; /* Distribute items evenly across the row */
+  align-items: flex-start; /* Align items to the top of each column */
+}
+
+.advisors h1 {
+  color: rgb(103, 90, 6);
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.advisors p {
+  color: #000;
+}
+
+.advisors ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Display advisor items in a row */
+  flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
+  justify-content: space-between; /* Distribute items evenly across the row */
+}
+
+.advisors li {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 15px;
+  flex-basis: calc(33.33% - 10px); /* Adjust the width of each item (33.33% to fit three items in a row with some spacing) */
+  margin-right: 10px; /* Add some spacing between items */
+}
+
+.advisors p {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
