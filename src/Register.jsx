@@ -1,27 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link,useNavigate} from "react-router-dom";
 
-
-
-
-
-const Register = () => {
-    const [formData, setFormData] = useState({
-        first_name: "",
-        last_name: "",
-        email: "",
-        password: "",
-        role: "",
-    });
-
-    const { first_name, last_name, email, password, role } = formData;
-
-   let navigate = useNavigate()
-
-
-
-const Register = () => {
+const Register = ({ changeForm }) => {
     const [formData, setFormData] = useState({
         first_name: "",
         last_name: "",
@@ -37,8 +17,7 @@ const Register = () => {
         console.log(formData);
 
         try {
-
-            const response = await axios.post("https://agrotechbackend.onrender.com/register", formData);
+            const response = await axios.post("https://agrotechbackend.onrender.com/user", formData);
             console.log(response.data); // Handle the response from the backend
         } catch (error) {
             console.error(error);
@@ -52,7 +31,6 @@ const Register = () => {
             password: "",
             role: "",
         });
-               navigate(`/cards/${user.id}`)
     };
 
     return (
@@ -101,13 +79,11 @@ const Register = () => {
                 />
                 <button type="submit">Sign Up</button>
             </form>
-
-            <button><Link to="/login">Already have an account</Link></button>
             <button onClick={() => changeForm("login")}>
                 Already have an account.
             </button>
         </div>
     );
-};}
+};
 
 export default Register;
