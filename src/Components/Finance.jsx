@@ -48,15 +48,6 @@ const Finance = () => {
                     ))}
                 </tbody>
             </table>
-            <p>
-                Ut ac libero nec lorem efficitur semper. Integer non turpis eget libero elementum malesuada. Vestibulum volutpat, tortor eu vehicula eleifend, urna lectus condimentum est, nec scelerisque dui risus in libero.
-            </p>
-            <div className="image-below-table">
-                <img src="https://i.pinimg.com/564x/42/32/14/423214d64a4655657478bbbe1eeed29e.jpg" alt="Farm Image 3" />
-                <p>
-                    Suspendisse potenti. Suspendisse euismod nisl eu erat condimentum, nec consequat nisl vehicula. Aliquam facilisis sem non orci facilisis, sit amet gravida odio fermentum.
-                </p>
-            </div>
         </div>
     );
 };
