@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import {useNavigate } from "react-router-dom";
+
 
 const Register = ({ changeForm }) => {
     const [formData, setFormData] = useState({
@@ -11,6 +13,7 @@ const Register = ({ changeForm }) => {
     });
 
     const { first_name, last_name, email, password, role } = formData;
+    let navigate = useNavigate()
 
     const signUp = async (e) => {
         e.preventDefault();
@@ -22,7 +25,8 @@ const Register = ({ changeForm }) => {
         } catch (error) {
             console.error(error);
         }
-
+          
+        navigate(`/cards/${user.id}`)
         // Clear the form inputs after submission
         setFormData({
             first_name: "",
