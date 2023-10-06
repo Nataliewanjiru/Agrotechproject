@@ -6,18 +6,18 @@ import axios from "axios";
 
 function Livestock() {
   const { userId } = useParams();
+  const [formData, setFormData] = useState({
+    farm_id: "",
+    livestock_type: "",
+    weaning_date: "",
+    slaughter_date: "",
+    quantity: "",
+});
 
-  const initialFormData = {
-    farmId: userId,
-    livestockType: "",
-    weaningDate: "",
-    slaughterDate: "",
-    quantity: ""
-  };
-
-  const [formData, setFormData] = useState(initialFormData);
+  
+  const { farm_id, livestock_type, weaning_date,  slaughter_date,  quantity } = formData;
   const [data, setData] = useState([]);
-  const { farmId, livestockType, weaningDate, slaughterDate, quantity } = formData;
+  
 
   useEffect(() => {
     fetch("https://agrotechbackend.onrender.com/livestocks")
@@ -26,29 +26,25 @@ function Livestock() {
   }, []);
 
   let newData = data.filter(item => item.farm_id == userId);
-
-  const handleFormSubmit = async (e) => {
+ 
+   const handleFormSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-  
     try {
-      const response = await axios.post("https://agrotechbackend.onrender.com/livestocks", {
-        farm_id: farmId, 
-        livestock_type: livestockType,
-        weaning_date: weaningDate,
-        slaughter_date: slaughterDate,
-        quantity: quantity
-      });
-      
-      console.log(response.data); // Handle the response from the backend
-  
-      // Clear the form inputs after successful submission
-      setFormData(initialFormData);
+        const response = await axios.post("https://agrotechbackend.onrender.com/livestock", formData);
+        console.log(response.data); // Handle the response from the backend
     } catch (error) {
-      console.error(error);
+        console.error(error);
     }
-  };
-  
+    // Clear the form inputs after submission
+    setFormData({
+        farm_id: "",
+        livestock_type: "",
+        weaning_date: "",
+        slaughter_date: "",
+        quantity: "",
+    });
+}
 
   return (
     <div className="main" style={{ fontFamily: 'Arial, sans-serif', maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
@@ -83,13 +79,22 @@ function Livestock() {
         </section>
         <section>
           <form onSubmit={handleFormSubmit}>
+          <div className="form-group">
+              <label htmlFor="slaughterDate">Farm ID:</label>
+              <input
+                type="number"
+                id="farmId"
+                value={farm_id}
+                onChange={(e) => setFormData({ ...formData, farm_id: e.target.value })}
+              />
+           </div>
             <div className="form-group">
               <label htmlFor="livestockType">Livestock Type:</label>
               <input
                 type="text"
                 id="livestockType"
-                value={livestockType}
-                onChange={(e) => setFormData({ ...formData, livestockType: e.target.value })}
+                value={livestock_type}
+                onChange={(e) => setFormData({ ...formData, livestock_type: e.target.value })}
               />
             </div>
             <div className="form-group">
@@ -97,8 +102,8 @@ function Livestock() {
               <input
                 type="date"
                 id="weaningDate"
-                value={weaningDate}
-                onChange={(e) => setFormData({ ...formData, weaningDate: e.target.value })}
+                value={weaning_date}
+                onChange={(e) => setFormData({ ...formData, weaning_date: e.target.value })}
               />
             </div>
             <div className="form-group">
@@ -106,8 +111,8 @@ function Livestock() {
               <input
                 type="date"
                 id="slaughterDate"
-                value={slaughterDate}
-                onChange={(e) => setFormData({ ...formData, slaughterDate: e.target.value })}
+                value={slaughter_date}
+                onChange={(e) => setFormData({ ...formData, slaughter_date: e.target.value })}
               />
             </div>
             <div className="form-group">

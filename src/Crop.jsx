@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import './crop.css';
 import {useParams } from "react-router-dom";
+import axios from "axios";
 
 
 function Crop() {

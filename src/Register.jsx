@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link} from "react-router-dom";
+import { Link,useNavigate} from "react-router-dom";
 
 
 
@@ -17,7 +17,7 @@ const Register = () => {
 
     const { first_name, last_name, email, password, role } = formData;
 
-   
+   let navigate = useNavigate()
 
 
     const signUp = async (e) => {
