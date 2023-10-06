@@ -20,11 +20,24 @@ const Register = () => {
    let navigate = useNavigate()
 
 
+
+const Register = () => {
+    const [formData, setFormData] = useState({
+        first_name: "",
+        last_name: "",
+        email: "",
+        password: "",
+        role: "",
+    });
+
+    const { first_name, last_name, email, password, role } = formData;
+
     const signUp = async (e) => {
         e.preventDefault();
         console.log(formData);
 
         try {
+
             const response = await axios.post("https://agrotechbackend.onrender.com/register", formData);
             console.log(response.data); // Handle the response from the backend
         } catch (error) {
@@ -39,7 +52,7 @@ const Register = () => {
             password: "",
             role: "",
         });
-        navigate(`/cards/${user.id}`)
+               navigate(`/cards/${user.id}`)
     };
 
     return (
@@ -88,9 +101,13 @@ const Register = () => {
                 />
                 <button type="submit">Sign Up</button>
             </form>
+
             <button><Link to="/login">Already have an account</Link></button>
+            <button onClick={() => changeForm("login")}>
+                Already have an account.
+            </button>
         </div>
     );
-};
+};}
 
 export default Register;
