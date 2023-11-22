@@ -7,6 +7,7 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    z-index: 2;
 }
 
 .about-content {
@@ -35,20 +36,8 @@
 }
 
 .Photos img {
-    max-width: 300px;
-    margin: 0 10px;
-    border-radius: 5px;
-}
-.about-us .box23{
-width: 17%; /* Adjust dimensions as needed */
-height: 43%;
-background-color: white; /* Background color */
-clip-path: polygon(20% 0%, 90% 5.3%, 73% 100%, 6% 70%);
-rotate: -7deg;
-position: absolute;
-left:78%;
-z-index: 2;
-bottom:42.7%;
+    width:20%;
+    border-radius: 5%;
 }
 .about-us .triangle56{
  width: 0%;
@@ -58,3 +47,16 @@ border-left: 290px solid orange;
 position: absolute;
 bottom: 0%;
 }
+
+@media screen and (max-width: 1530px) {
+
+        .about-us .triangle56{
+         width: 0%;
+        height: 0;
+        border-top: 70px solid transparent;
+        border-left: 110px solid orange; 
+        position: absolute;
+        bottom: 0%;
+        }
+        
+  }

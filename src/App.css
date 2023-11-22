@@ -123,6 +123,9 @@
   border: 0px solid white;
   box-shadow: 22px 17px 8px rgba(0, 0, 0, 0.4);
 }
+.home-section-two .second-description button a{
+  color: white;
+}
 
 .home-section-two .second-picture img{
   width: 90%;

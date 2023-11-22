@@ -30,7 +30,7 @@ const Home = () => {
         <li>Keep track of your equipments</li>
         <li>Get access to the latest news and updates</li>
       </ul>
-       <button>REGISTER</button>
+       <button><Link to="/signup">REGISTER</Link></button>
        </div>
        <div className="second-picture">
         <div className="diamond"></div>
