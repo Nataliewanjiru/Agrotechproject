@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from "react";
 import { Link,useNavigate } from "react-router-dom";
-
+import './App.css'
 
 
 
@@ -45,15 +45,17 @@ function Login() {
       
   
     return (
+      <div className="sign-in-parent">
         <div className="sign-in-container">
+        <h1>Discover The Future of Food with AgroTech</h1>
+        <p>We provide a platform where you can keep track of your farm including finances at any part of the country from your own comfort.Don't Be left out join and catch up from where you left it from</p>
         <form onSubmit={signIn}>
-            <h1>Log In to your Account</h1>
             <input type="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
             <input type="password" placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
             <button type="submit">Log In</button>
         </form>
         <button><Link to="/signup">Don't have an account</Link></button>
-
+    </div>
     </div>
     )
   }

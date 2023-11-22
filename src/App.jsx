@@ -18,7 +18,6 @@ const App = () => {
    
   return(
     <>
-      <Navbar />
      <Routes>
       <Route path="/" exact="true" element={<Home/>}/>
       <Route path="/login" exact="true" element={<Login/>}/>

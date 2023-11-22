@@ -1,11 +1,13 @@
 import React from 'react';
 import './about.css';
 import 'font-awesome/css/font-awesome.min.css';
+import Navbar from './Navbar';
 
 
 const AboutUs = () => {
     return (
         <section className="about-us">
+            <Navbar/>
             <div className="container">
                 <div className="about-content">
                     <h2>About Us</h2>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import  './advisor.css';
+import Navbar from './Navbar';
 
 
 function Advisor() {
@@ -14,6 +15,7 @@ function Advisor() {
 
   return (
     <div className='advisors'>
+      <Navbar/>
       <h1>Meet Our Expert Advisors</h1>
       <p>Our course is backed by a team of experienced advisors who bring a wealth of knowledge and expertise to guide you on your journey. Get to know them through our platform feel free to consult from the best there is in the Agriculture field.These are the advisors for this course</p>
       <ul>

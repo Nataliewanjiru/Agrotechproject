@@ -26,6 +26,7 @@ function Livestock() {
       .then((data) => setData(data))
   }, []);
 
+
   let newData = data.filter(item => item.farm_id == userId);
  
    const handleFormSubmit = async (e) => {
@@ -33,7 +34,7 @@ function Livestock() {
     console.log(formData);
     try {
         const response = await axios.post("https://agrotechbackend.onrender.com/livestock", formData);
-        console.log(response.data); // Handle the response from the backend
+        console.log(response.data);
     } catch (error) {
         console.error(error);
     }
