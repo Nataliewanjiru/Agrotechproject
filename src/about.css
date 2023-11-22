@@ -1,8 +1,7 @@
 /* about.css */
-
-.about-us {
-    padding: 50px;
-    background-color: #f9f9f9;
+.about-us{
+    background-color: #f0f0f0;
+    position: relative;
 }
 
 .container {
@@ -40,45 +39,22 @@
     margin: 0 10px;
     border-radius: 5px;
 }
-
-.Contact-Us {
-    text-align: center;
-    margin-top: 30px;
-    border: 2px solid #ccc; /* Add border */
-    background-color: #5e3c05d5; /* Add background color */
-    padding: 20px; /* Add some padding for spacing */
+.about-us .box23{
+width: 17%; /* Adjust dimensions as needed */
+height: 43%;
+background-color: white; /* Background color */
+clip-path: polygon(20% 0%, 90% 5.3%, 73% 100%, 6% 70%);
+rotate: -7deg;
+position: absolute;
+left:78%;
+z-index: 2;
+bottom:42.7%;
 }
-
-.Contact-Us h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.Contact-Us h3, .Contact-Us h4 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #383737;
-}
-
-.Contact-Us p {
-    font-size: 1.2em;
-    color: #292929;
-    margin-bottom: 10px;
-}
-
-.Contact-Us i {
-    margin-right: 10px;
-    color: #e8eae9;
-    font-size: 1.2em;
-    padding: 10px;
-}
-
-.Contact-Us a {
-    color: #eaedf0; /* Change this to your preferred link color */
-    text-decoration: none;
-}
-
-.Contact-Us a:hover {
-    text-decoration: underline;
+.about-us .triangle56{
+ width: 0%;
+height: 0;
+border-top: 170px solid transparent;
+border-left: 290px solid orange; 
+position: absolute;
+bottom: 0%;
 }

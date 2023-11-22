@@ -33,32 +33,8 @@ const AboutUs = () => {
                 <img src="https://i.pinimg.com/564x/bb/bb/dc/bbbbdcc3673e13a12be1ed13583e92b3.jpg" alt="Farmers" />
                 <img src="https://i.pinimg.com/564x/44/c4/e4/44c4e4ce996873c26842b0752cdba6b7.jpg" alt='tractor'/>
             </div>
-            <div className="Contact-Us">
-                <h2>Contact Us</h2>
-                    <h3>Email:</h3>
-                    <p>
-                        <i className="fa fa-envelope"></i> <a href="mailto:ianndungu06@gmail.com">ianndungu06@gmail.com</a>
-                    </p>
-                     <p>
-                     <i className="fa fa-envelope"></i> <a href="mailto:elsamojo@gmail.com">elsamojo@gmail.com</a>
-                    </p>
-                    <p>
-                    <i className="fa fa-envelope"></i> <a href="mailto:justinkamente@gmail.com">justinkamente@gmail.com</a>
-                    </p>
-                    <p>
-                    <i className="fa fa-envelope"></i> <a href="mailto:nataliewanjiru@gmail.com">nataliewanjiru@gmail.com</a>
-                    </p>
-                    <h4>Telephone:</h4>
-                    <p>
-                        <i className="fa fa-phone"></i> <a href="tel:+254717393483">+254717393483</a>
-                        <i className="fa fa-phone"></i> <a href="tel:+254735566712">+254735566712</a>
-                        <i className="fa fa-phone"></i> <a href="tel:+254704022354">+254704022354</a>
-                        <i className="fa fa-phone"></i> <a href="tel:+254722540295">+254722540295</a>
-                    </p>
-            </div>
-            <footer>
-                <p>&copy; Copyright Agro Tech 2023. Rental Agreement. Terms of service. Privacy policy.</p>
-            </footer>
+            <div className='box23'></div>
+            <div className='triangle56'></div>
         </section>
     );
 };
