@@ -1,5 +1,23 @@
+.liveStockBody .firstSection{
+  background-image: url("https://images.pexels.com/photos/693776/pexels-photo-693776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: 100% 35rem;
+}
+.liveStockBody  h1{
+  text-align: center;
+  padding: 6%;
+}
 
-
+.liveStockBody .main{
+  width:55%;
+  margin-left: 21%;
+}
+.liveStockBody .Text{
+  font-size: 110%;
+}
+.liveStockBody{
+  background-color: rgb(224, 222, 222);
+}
 /* Styling for individual livestock image and description */
 .livestock-images .Cow,
 .livestock-images .Rabbit,
@@ -34,14 +52,24 @@
 
 .livestockList {
   list-style: none;
-  padding: 0;
+  margin-bottom: 14%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:2%;
 }
 
 .livestock-item {
   border: 1px solid #ddd;
   margin-bottom: 8px;
-  padding: 8px;
-  background-color: #fff;
+  padding: 8%;
+  background-color: rgb(214, 211, 211);
+  box-shadow: 22px 17px 8px rgba(0, 0, 0, 0.4);
+}
+.livestock-item .five{
+  width:100%;
+}
+.livestock-item span{
+  text-align: center;
 }
 
 .livestock-item span {
@@ -54,4 +82,39 @@ footer {
   text-align: center;
   padding: 10px;
   border-radius: 0 0 10px 10px; /* Add rounded corners to the bottom of the footer */
+}
+.selectedAnimal{
+ display: flex;
+ margin-top: 10%;
+ margin-bottom: 10% ;
+}
+.selectedAnimal .first{
+  width:80%
+}
+.selectedAnimal .selectedImage{
+  width:100%;
+}
+.selectedAnimal .second{
+  width:65%;
+  margin-left:5%;
+}
+.selectedAnimal .second .one{
+  font-size: 320%;
+  color: green;
+  line-height: 0;
+}
+
+.selectedAnimal .second .two{
+  font-weight: 100;
+font-size: 120%;
+width: 65%;
+}
+.selectedAnimal .second .two i{
+  color: green;
+}
+.selectedAnimal .second .four{
+  font-size: 220%;
+}
+.selectedAnimal .second .four i{
+  color: orange;
 }

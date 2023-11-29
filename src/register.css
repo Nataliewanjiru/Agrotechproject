@@ -1,0 +1,61 @@
+.sign-in-parent{
+  margin-left: 30%;
+  border: 5px solid rgb(127, 198, 14);
+  width: 40%;
+  height: 50rem;
+  margin-top: 5%;
+  background-color: rgba(236, 230, 230, 0.913);
+}
+.signInBody{
+    background-image: url("https://plus.unsplash.com/premium_photo-1664635402656-4bf26081ec33?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    height: 74rem;
+}
+.sign-in-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.sign-in-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 0;
+}
+.sign-in-container p{
+  width:40%;
+}
+
+.sign-in-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width:50%;
+}
+
+.sign-in-container input {
+  padding: 10px;
+  border: 2px solid rgb(127, 198, 14);
+  border-radius: 5px;
+ 
+}
+
+.sign-in-container button {
+  background-color:white;
+  color:rgb(127, 198, 14);;
+  padding: 10px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-in-container button:hover {
+  background-color:rgb(127, 198, 14);;
+  color: #092225;
+}
+
+.sign-in-container button a {
+  color:#092225;
+  text-align: center;
+  margin-top: 10px;
+}

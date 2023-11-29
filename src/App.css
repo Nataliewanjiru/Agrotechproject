@@ -324,3 +324,24 @@ bottom: 0%;
 .sixth-section button{
   background-color: orange;
 }
+
+@media screen and (max-width: 1000px) {
+   
+.home-section-two{
+  display: flex;
+  flex-direction: column;
+}
+.home-section-two .second-description{
+  width:100%;
+  margin-bottom: 8%;
+}
+  .home-section-two .second-picture{
+    width:90%;
+    margin-bottom: 19%;
+    margin-left: 8%;
+  }
+.home-section-two .second-picture .diamond{
+  width:0%;
+}
+
+}
