@@ -24,7 +24,7 @@ const Register = () => {
         
         try {
             if(first_name,last_name,username,email,password,role){
-            const response = await axios.post("http://127.0.0.1:5909/usersignup", formData);
+            const response = await axios.post("https://agrotechbackend.onrender.com/usersignup", formData);
             swal({
                 title: 'Success',
                 text: 'User created successfully',

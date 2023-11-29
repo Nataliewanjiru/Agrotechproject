@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import './livestocks.css';
-import Carousel from "./carousel";
 import axios from "axios";
 import Navbar from "./Navbar";
 
 function Livestock() {
-  const { userId } = useParams();
+  const farmID = localStorage.getItem('farmID');
   
   const [formData, setFormData] = useState({
-    farm_id: "",
+    farm_id: farmID,
     livestock_type: "",
     weaning_date: "",
     slaughter_date: "",
@@ -25,27 +24,28 @@ function Livestock() {
   
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5909/livestocks")
+    fetch("https://agrotechbackend.onrender.com/livestocks")
       .then((res) => res.json())
       .then((data) => setData(data))
-  }, []);
+  }, [animal]);
 
   
 
-  let newData = data.filter(item => item.farm_id == userId);
+  let newData = data.filter(item => item.farm_id == farmID);
  
    const handleFormSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
     try {
         const response = await axios.post("http://127.0.0.1:5909/livestock", formData);
+        setData(...array,{formData})
         console.log(response.data);
     } catch (error) {
         console.error(error);
     }
     // Clear the form inputs after submission
     setFormData({
-        farm_id: "",
+        farm_id: farmID,
         livestock_type: "",
         weaning_date: "",
         slaughter_date: "",
@@ -107,7 +107,7 @@ const cardClicked = (item)=>{
                 }
             </div>
             <ul className="livestockList">
-              {data.map((livestock, index) => (
+              {newData.map((livestock, index) => (
                 <li key={index} className="livestock-item" onClick={()=>{cardClicked(livestock)}}>
                    <img className="five"src={livestock.image}/>
                   <span className="one">Type: {livestock.livestock_type}</span>
