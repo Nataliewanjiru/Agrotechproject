@@ -29,19 +29,13 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">Crops</Link>
+            <Link to="/crops">Crops</Link>
           </li>
           <li>
             <Link to="/livestocks">Livestock</Link> 
           </li>
           <li>
             <Link to="/advisor">Equipment</Link> 
-          </li>
-          <li>
-            <Link to="/advisor">Finance</Link>
-          </li>
-          <li>
-            <Link to="/advisor">Advisors</Link>
           </li>
           <li className={location.pathname === '/about' ? 'active' : ''}>
             <Link to="/about">About</Link>

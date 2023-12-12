@@ -17,36 +17,11 @@
 }
 .liveStockBody{
   background-color: rgb(224, 222, 222);
-}
-/* Styling for individual livestock image and description */
-.livestock-images .Cow,
-.livestock-images .Rabbit,
-.livestock-images .Chicken {
-  flex: 0.3;
-  text-align: center;
-}
-
-/* Styling for livestock images */
-.livestock-images img {
-  max-width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-/* Styling for livestock descriptions */
-.livestock-images p {
-  font-size: 0.9em;
-  color: #000;
-}
-
-
-.Cow p,
-.Rabbit p,
-.Chicken p {
-  margin-top: 10px;
-  font-style: italic;
-  color: #000;
+  margin:0;
+} 
+.liveStockBody button{
+  background-color: green;
+  z-index: 2;
 }
 
 
@@ -117,4 +92,40 @@ width: 65%;
 }
 .selectedAnimal .second .four i{
   color: orange;
+}
+
+.formParent{
+  background-color: white;
+  border: 3px solid orange;
+   box-shadow: 26px 17px 5px rgba(3, 0, 0, 0.4);
+   margin-bottom: 2%;
+   position: relative;
+}
+.formParent .box{
+  width: 12%; /* Adjust dimensions as needed */
+height: 68%;
+background-color: orange; /* Background color */
+clip-path: polygon(9% 0%, 93.2% 1%, 74% 97%, 4% 32%);
+rotate: -3deg;
+position: absolute;
+left:90.1%;
+bottom:32.5%;
+z-index: 1;
+}
+
+.formParent .triangle2{
+width: 0%;
+height: 0%;
+border-top: 160px solid transparent;
+border-left: 184px solid green; 
+position: absolute;
+bottom: 0%;
+margin-left: 1%;
+}
+
+.formParent .front{
+  border: 3px solid yellow;
+  padding: 5%;
+  margin:10%;
+  box-shadow: 16px 27px 5px rgba(7, 3, 0, 0.4);
 }

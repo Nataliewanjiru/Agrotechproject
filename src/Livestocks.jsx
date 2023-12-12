@@ -20,7 +20,7 @@ function Livestock() {
   
   const { farm_id, livestock_type, weaning_date,  slaughter_date,  quantity ,image ,information} = formData;
   const [data, setData] = useState([]);
-  const[animal,setAnimal] = useState([])
+  const[animal,setAnimal] = useState(false)
   
 
   useEffect(() => {
@@ -37,7 +37,7 @@ function Livestock() {
     e.preventDefault();
     console.log(formData);
     try {
-        const response = await axios.post("http://127.0.0.1:5909/livestock", formData);
+        const response = await axios.post("https://agrotechbackend.onrender.com/livestock", formData);
         setData(...array,{formData})
         console.log(response.data);
     } catch (error) {
@@ -116,16 +116,9 @@ const cardClicked = (item)=>{
               ))}
             </ul>
           </div>
-          <form onSubmit={handleFormSubmit}>
-<div className="form-group">
-    <label htmlFor="slaughterDate">Farm ID:</label>
-    <input
-      type="number"
-      id="farmId"
-      value={farm_id}
-      onChange={(e) => setFormData({ ...formData, farm_id: e.target.value })}
-    />
- </div>
+      <form onSubmit={handleFormSubmit} className="formParent">
+      <div className="box"></div>
+      <div className="front">
   <div className="form-group">
     <label htmlFor="livestockType">Livestock Type:</label>
     <input
@@ -181,6 +174,8 @@ const cardClicked = (item)=>{
   />
 </div>
   <button type="submit">Add Livestock</button>
+  </div>
+  <div className="triangle2"></div>
 </form>
         </section>
       </main>

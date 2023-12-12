@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import './crop.css';
 import {useParams } from "react-router-dom";
 import axios from "axios";
+import Navbar from './Navbar';
 
 
 function Crop() {
@@ -67,6 +68,8 @@ function Crop() {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="crop">
       <main>
         <h1>Crop Management</h1>
@@ -147,6 +150,7 @@ function Crop() {
                 <p>&copy; Copyright Agro Tech 2023. Rental Agreement. Terms of service. Privacy policy.</p>
        </footer>
     </div>
+    </>
   );
 }
 

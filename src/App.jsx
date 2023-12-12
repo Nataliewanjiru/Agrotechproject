@@ -64,7 +64,7 @@ const App = () => {
       <Route path="/login" exact="true" element={isAuthenticated ? <Navigate to="/" /> : <Login onLogin={handleLogin} />}/>
       <Route path="/signup" exact="true" element={<Register/>}/>
       <Route path="/cards/:userId" exact="true" element={<Cards/>}/>
-      <Route path ="/crops/:userId" exact="true"element={isAuthenticated ? <Crop /> : <Navigate to="/login" />}/>
+      <Route path ="/crops" exact="true"element={isAuthenticated ? <Crop /> : <Navigate to="/login" />}/>
       <Route path="/livestocks" exact="true" element={ isAuthenticated ? <Livestock /> : <Navigate to="/login" />}/>
       <Route path="/about" exact="true" element={<AboutUs/>}/>
       <Route path="/equipments/:userId" exact="true" element={<Equipment/>}/>
